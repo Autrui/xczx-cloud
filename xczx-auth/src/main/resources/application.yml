@@ -1,0 +1,19 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: auth
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        namespace: f46302e3-f087-47a2-83a0-4b0484d5367b
+        group: xczx-dev
+      discovery:
+        namespace: f46302e3-f087-47a2-83a0-4b0484d5367b
+        group: xczx-dev
+  #        cluster-name: SKT
+  config:
+    import:
+      - optional:nacos:auth-dev.yaml
